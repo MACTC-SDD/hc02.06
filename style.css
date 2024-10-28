@@ -1,0 +1,186 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+layout {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+}
+
+/* Keyframes to rotate */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shift between three colors */
+@keyframes rgb {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: green;
+  }
+  66% {
+    background-color: blue;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+/* follow a path */
+@keyframes path {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateX(200px) translateY(-200px);
+  }
+  75% {
+    transform: translateX(0px) translateY(-200px);
+  }
+  100% {
+    transform: transate(0px,0px);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rainbow-border{
+		0%,100%{
+			border-color: rgb(255,0,0);
+		}
+		8%{
+			border-color: rgb(255,127,0);
+		}
+		16%{
+			border-color: rgb(255,255,0);
+		}
+		25%{
+			border-color: rgb(127,255,0);
+		}
+		33%{
+			border-color: rgb(0,255,0);
+		}
+		41%{
+			border-color: rgb(0,255,127);
+		}
+		50%{
+			border-color: rgb(0,255,255);
+		}
+		58%{
+			border-color: rgb(0,127,255);
+		}
+		66%{
+			border-color: rgb(0,0,255);
+		}
+		75%{
+			border-color: rgb(127,0,255);
+		}
+		83%{
+			border-color: rgb(255,0,255);
+		}
+		91%{
+			border-color: rgb(255,0,127);
+		}
+}
+
+@keyframes rotate-x-y {
+  /* Here you will make key frames that:
+    rotateX forward 180 degrees
+    rotateX backward 180 degrees
+    rotateY forward 180 degrees
+    rotateY backward 180 degrees
+  */
+}
+/* A class to make a box for examples */
+.box {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 150px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px dotted;
+}
+
+.custom-box {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  line-height: 300px;
+  grid-column: 1 / span 2;
+}
+
+/* A class for our rainbow-border animation */
+.rainbow-border {
+  animation: rainbow-border 1s infinite;
+}
+
+#box1 {
+
+}
+
+#box1:hover {
+  animation: rotate 2s infinite;
+  animation-timing-function: linear;
+}
+
+#box2 {
+  background-color: red;
+}
+
+#box2:hover {
+  animation: rgb 2s infinite;
+}
+
+#box3 {
+  
+}
+
+#box3:hover {
+  animation: path 4s;
+}
+
+#box4 {
+  animation: slide-in 1s;
+}
+
+#box5 {
+
+}
+
+#box6 {
+
+}
+
+#yours {
+  
+}
